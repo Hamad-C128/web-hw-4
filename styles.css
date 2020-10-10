@@ -147,6 +147,7 @@ html, body {
       .header a.logo {
         font-size: 25px;
         font-weight: bold;
+        margin-left: 10%;
       }
       
       .header a:hover {
@@ -161,6 +162,7 @@ html, body {
       
       .header-right {
         float: right;
+        margin-right: 8%;
       }
       
       @media screen and (max-width: 500px) {

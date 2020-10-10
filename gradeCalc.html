@@ -104,13 +104,14 @@
       </tr>
       <tr>
         <td style="color: white;font-size: 20px;"><h4 id="eqal">0%</h4></td>
-        <td style="color: white;font-size: 20px;"><h4 id="t8ym">-</h4></td>
+        <td style="color: white;font-size: 20px;"><h3 id="t8ym">-</h3></td>
         <td style="color: white;font-size: 20px;">التقييم و النسبه</td>
       </tr>
     </table>
     <button class="innputt" onclick="colect()" style="margin-left: 28%; margin-top: 10px;width: 550px;height: 50px;font-size: 20px;border-radius: 4px; color: white;background-color: #393b44;"> اضغط هنا لحساب النسبه  </button>
     <script>
        function colect() {
+       const t8yem = document.getElementById('t8ym');
        const greds = document.getElementById('gred'); 
        const inputv  = greds.value;
        const greds1 = document.getElementById('gred1'); 
@@ -143,18 +144,24 @@
             tootal.innerHTML = tot
             let tolla= ((Number(inputv) + Number(inputv1) + Number(inputv2) + Number(inputv3) + Number(inputv4) + Number(inputv5) + Number(inputv6) + Number(inputv7) + Number(inputv8) + Number(inputv9) + Number(inputv10) + Number(inputv11) + Number(inputv12))/660)* 100 + '%';
             too.innerHTML = tolla
-         const t8yem = document.getElementById(`t8ym`);
-         if (tolla <= 100 && tolla >= 90) {
-            t8yem.innerHTML = `A`
-         }else if (tolla <= 90 && tolla >= 80) {
-            t8yem.innerHTML = `B`
-         }else if (tolla <= 80 && tolla >= 70) {
-            t8yem.innerHTML = `C`
-         }else if (tolla <= 70 && tolla >= 60) {
-            t8yem.innerHTML = `D`
-         }else if (tolla <= 59 ) {
-            t8yem.innerHTML = `F`
-       }
+         
+         if (tot <= 660 && tot >= 594) {
+          t8yem.innerHTML = `A`;
+         }else if (tot <= 593 && tot >= 528) {
+          t8yem.innerHTML = `B`;
+         }else if (tot <= 593 && tot >= 528) {
+          t8yem.innerHTML = `C`;
+         }else if (tot <= 527 && tot >= 462) {
+          t8yem.innerHTML = `D`;
+         }else if (tot <= 461 && tot >= 396) {
+          t8yem.innerHTML = `F`;
+         
+         }else if (tot <= 396) {
+          t8yem.innerHTML = `Error`;
+         }else{
+          t8yem.innerHTML = `-`;
+         }
+       
        }
     </script>
    
